@@ -6,6 +6,8 @@ import Container from "../components/Container/Container";
 
 import styles from "../styles/Home.module.scss";
 
+import products from "../data/products.json";
+
 export default function Home() {
   return (
     <div>
@@ -22,36 +24,18 @@ export default function Home() {
           <h1>2BadCats</h1>
           <h2>Check em Out</h2>
           <ul className={styles.products}>
-            <li>
-              <img src="/images/witchHut.jpeg" alt="Luna in her witch hut" />
-              <h3>Luna Plotting in the Witch Hut</h3>
-              <p>
-                $100
-              </p>
-              <p>
-                <button>Add to Cart</button>
-              </p>
-            </li>
-            <li>
-              <img src="/images/witchHut.jpeg" alt="Luna in her witch hut" />
-              <h3>Luna Plotting in the Witch Hut</h3>
-              <p>
-                $100
-              </p>
-              <p>
-                <button>Add to Cart</button>
-              </p>
-            </li>
-            <li>
-              <img src="/images/witchHut.jpeg" alt="Luna in her witch hut" />
-              <h3>Luna Plotting in the Witch Hut</h3>
-              <p>
-                $100
-              </p>
-              <p>
-                <button>Add to Cart</button>
-              </p>
-            </li>
+            {products.map((product) => {
+              return (
+                <li key={product.id}>
+                  <img src={product.image} alt={`Shot of ${product.title}`} />
+                  <h3>{product.title}</h3>
+                  <p>${product.price}</p>
+                  <p>
+                    <button>Add to Cart</button>
+                  </p>
+                </li>
+              );
+            })}
           </ul>
         </Container>
       </main>
