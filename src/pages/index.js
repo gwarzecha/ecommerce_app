@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import Header from "../components/Header";
 import Container from "../components/Container/Container";
+import Button from "../components/Button/Button";
 
 import styles from "../styles/Home.module.scss";
 
@@ -27,11 +28,15 @@ export default function Home() {
             {products.map((product) => {
               return (
                 <li key={product.id}>
-                  <img src={product.image} alt={`Shot of ${product.title}`} />
-                  <h3>{product.title}</h3>
-                  <p>${product.price}</p>
+                  <Image width="768" height="1024" src={product.image} alt={`Shot of ${product.title}`} />
+                  <h3 className={styles.productTitle}>
+                    {product.title}
+                  </h3>
+                  <p className={styles.productPrice}>
+                    ${product.price}
+                  </p>
                   <p>
-                    <button>Add to Cart</button>
+                    <Button>Add to Cart</Button>
                   </p>
                 </li>
               );
