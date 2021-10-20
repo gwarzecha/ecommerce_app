@@ -10,5 +10,23 @@
     "title": "Sleeping beauty",
     "price": 151.99,
     "image": "/images/sleepingBeauty.jpeg"
+  },
+  {
+    "id": "Olive2",
+    "title": "Hello there",
+    "price": 151.99,
+    "image": "/images/helloThere.jpeg"
+  },
+  {
+    "id": "Luna2",
+    "title": "Slumber Party",
+    "price": 151.99,
+    "image": "/images/slumberParty.jpeg"
+  },
+  {
+    "id": "Cats",
+    "title": "In the Doorway",
+    "price": 151.99,
+    "image": "/images/inTheDoorway.jpeg"
   }
 ]

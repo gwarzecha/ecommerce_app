@@ -1,4 +1,4 @@
-import { FaOpencart } from 'react-icons/fa';
+import { FaOpencart } from "react-icons/fa";
 
 import Container from "../Container/Container";
 
@@ -10,8 +10,12 @@ const Header = () => {
       <Container className={styles.headerContainer}>
         <p className={styles.headerTitle}>2BadCats Store</p>
         <p className={styles.headerCart}>
-          <FaOpencart />
-          $0.00
+          <button className="snipcart-checkout">
+            <FaOpencart />
+            <span className="snipcart-total-price">
+              $0.00
+            </span>
+          </button>
         </p>
       </Container>
     </header>
